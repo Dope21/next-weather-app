@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weather App
 
-## Getting Started
+A weather app create with Next.js and OpenWeatherMap API
 
-First, run the development server:
+## Live []()
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Stack
+- [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
+- [OpenWeatherMap](https://openweathermap.org/) - An API for calling weather data. 
+- [Framer Motion](https://www.framer.com/motion/) - An animation library for React.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom user interfaces.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
+`Search filter` - Filter location names from the input users were typing and suggested below the search box.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+`Smooth animation` - Smooth fade-in animation every time component get loaded.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+`Dynamic Background` - Background changes relate to the weather.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Design
+![First](public/images/desgin/first-page.png)
+![Mix](public/images/desgin/mix-image.png)
+![Responsive](public/images/desgin/responsive-image.png)
