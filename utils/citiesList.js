@@ -1,9 +1,10 @@
-const citiesList = [
   
   // This is not a complete set of all the location you can search in the API
   // There are still alot locations that didn't include in this list
   // The locations you are searching might not suggest in the search box
   // But you can still search them if they are available in the API
+
+const citiesList = [
 
   "Abidjan",
   "Alaska",
