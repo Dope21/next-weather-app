@@ -1,6 +1,12 @@
 const citiesList = [
   
+  // This is not a complete set of all the location you can search in the API
+  // There are still alot locations that didn't include in this list
+  // The locations you are searching might not suggest in the search box
+  // But you can still search them if they are available in the API
+
   "Abidjan",
+  "Alaska",
   "Africa",
   "Abu Dhabi",
   "Abuja",
@@ -214,6 +220,7 @@ const citiesList = [
   "Medina",
   "Melbourne",
   "Mexico City",
+  "Mexico",
   "Miami",
   "Minsk",
   "Mogadishu",
@@ -366,7 +373,6 @@ const citiesList = [
   "Yerevan",
   "Yokohama",
   "Zagreb",
-
   "Ivory Coast",
   "United Arab Emirates",
   "Ghana",
@@ -524,6 +530,7 @@ const citiesList = [
   "Cabo Verde",
   "Kosovo",
   "North Korea",
+  "Korea",
   "Philippines",
   "Ecuador",
   "Morocco",
@@ -581,6 +588,12 @@ const citiesList = [
   "Namibia",
   "Armenia",
   "Croatia",
+  "Albuquerque",
+  "New Mexico",
+  "Pentagon",
+  "England",
+  "Alabama",
+  "Arizona"
 ]
 
 export default citiesList
