@@ -3,8 +3,8 @@ import Details from '../components/Details'
 import SearchBar from '../components/SearchBar'
 import Temp from '../components/Temp'
 import callWeather from '../utils/callWeather'
-import { useEffect } from 'react'
 import Metadata from '../components/Metadata'
+import { useEffect } from 'react'
 
 export default function Home() {
 
