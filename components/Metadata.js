@@ -9,8 +9,8 @@ const Metadata = () => {
       <meta name="og:site_name" content="Weather App" />
       <meta name="og:title" content="Weather App" />
       <meta name="og:description" content="Weather App create by Next.js and Openweathermap API" />
-      <meta name="og:url" content="" />
-      <meta name="og:image" content="" />
+      <meta name="og:url" content="https://weather-app-three-theta.vercel.app/" />
+      <meta name="og:image" content="https://weather-app-three-theta.vercel.app/images/desgin/first-page.png" />
       <title>Weather App</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
