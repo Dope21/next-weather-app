@@ -4,21 +4,18 @@ import SearchBar from '../components/SearchBar'
 import Temp from '../components/Temp'
 import Metadata from '../components/Metadata'
 import { useEffect, useState } from 'react'
-import callWeather from '../utils/callWeather'
+import { callWeather } from '../utils/callWeather'
 
-export default function Home() {
+const Home = ({ ssrWeather }) => {
   const [weather, setWeather] = useState({})
+
+  useEffect(() => {
+    setWeather(ssrWeather)
+  }, [ssrWeather])
 
   const getLocation = async location => {
     setWeather(await callWeather(location))
   }
-
-  useEffect(
-    () => async () => {
-      setWeather(await callWeather('United States'))
-    },
-    []
-  )
 
   return (
     <div>
@@ -56,3 +53,6 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
+export { getServerSideProps } from '../utils/callWeather'
