@@ -1,10 +1,11 @@
-import { SearchIcon } from '@heroicons/react/solid'
+import { SearchIcon, XIcon } from '@heroicons/react/solid'
 import { useRef, useState } from 'react'
 import { citiesList } from '../utils/citiesList'
 
 export default function SearchBar({ location }) {
   const inputRef = useRef()
   const [list, setList] = useState([])
+  const [clearBtn, setClearBtn] = useState(false)
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -32,6 +33,25 @@ export default function SearchBar({ location }) {
     setList([])
   }
 
+  const handleClear = () => {
+    inputRef.current.value = ''
+    setClearBtn(false)
+    setList([])
+  }
+
+  const inputBlur = () => {
+    if (inputRef.current.value === '') {
+      setClearBtn(false)
+    }
+    setTimeout(() => {
+      setList([])
+    }, 100)
+  }
+
+  const inputFocus = () => {
+    setClearBtn(true)
+  }
+
   return (
     <form
       className="relative flex gap-2 items-center justify-between w-full bg-white rounded h-[50px] px-6"
@@ -47,19 +67,21 @@ export default function SearchBar({ location }) {
           placeholder="Search city name..."
           className="w-full outline-none"
           ref={inputRef}
+          onFocus={inputFocus}
+          onBlur={inputBlur}
           onChange={handleSearch}
           autoComplete="off"
-          onBlur={() =>
-            setTimeout(() => {
-              setList([])
-            }, 100)
-          }
         />
       </div>
-
-      <button type="submit">
-        <SearchIcon className="w-5 text-slate-400" />
-      </button>
+      {clearBtn ? (
+        <button type="button" onClick={handleClear}>
+          <XIcon className="w-5 text-slate-400" />
+        </button>
+      ) : (
+        <button type="submit">
+          <SearchIcon className="w-5 text-slate-400" />
+        </button>
+      )}
 
       {list.length !== 0 && (
         <div className="absolute top-14 rounded left-0 w-full bg-inherit z-30 p-2">
