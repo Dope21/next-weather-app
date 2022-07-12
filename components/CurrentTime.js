@@ -1,25 +1,22 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 function CurrentTime() {
-
   const getTimeFormat = () => {
-    const dateTime = new Date
-    const getHours = String(dateTime.getHours()).padStart(2, "0")
-    const getMinutes = String(dateTime.getMinutes()).padStart(2, "0")
+    const dateTime = new Date()
+    const getHours = String(dateTime.getHours()).padStart(2, '0')
+    const getMinutes = String(dateTime.getMinutes()).padStart(2, '0')
     const getDate = dateTime.getDate()
-    const getDay = dateTime.toLocaleString('en-us', {  weekday: 'long' })
+    const getDay = dateTime.toLocaleString('en-us', { weekday: 'long' })
     const getYear = dateTime.getFullYear()
-    return getHours + ':' + getMinutes + ' - ' + getDay + ' ' + getDate + ', ' + getYear
+    return `${getHours}:${getMinutes} - ${getDay} ${getDate}, ${getYear}`
   }
 
   const [time, setTime] = useState(getTimeFormat)
- 
+
   setInterval(() => setTime(getTimeFormat), 60 * 1000)
 
   return (
-    <span className="text-xl md:text-3xl font-light mb-11 md:mb-7">
-      {time}
-    </span>
+    <span className="text-xl md:text-3xl font-light mb-11 md:mb-7">{time}</span>
   )
 }
 
